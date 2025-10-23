@@ -1,0 +1,6 @@
+[submodule "CS5010_A3"]
+	path = CS5010_A3
+	url = https://github.com/lihaohl0307/CS5010_A3.git
+[submodule "Lab1/CS5010_lab1"]
+	path = Lab1/CS5010_lab1
+	url = https://github.com/lihaohl0307/CS5010_lab1.git
