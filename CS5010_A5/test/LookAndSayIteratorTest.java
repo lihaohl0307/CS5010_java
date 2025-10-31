@@ -73,6 +73,14 @@ class LookAndSayIteratorTest {
             assertFalse(it.hasNext());
             assertThrows(java.util.NoSuchElementException.class, it::next);
         }
+
+        @Test
+        void hasNextCurrentEqualsEndBound() {
+            // end = 21, seed = 21 → should still return 21, then stop
+            LookAndSayIterator it = new LookAndSayIterator(bi("21"), bi("21"));
+            assertFalse(it.hasNext());
+            assertThrows(java.util.NoSuchElementException.class, it::next);
+        }
     }
 
     @Nested

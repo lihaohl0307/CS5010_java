@@ -42,8 +42,7 @@ public class LookAndSayIterator implements RIterator<BigInteger> {
 
     @Override
     public boolean hasNext() {
-        // We are allowed to return current if it is not greater than the end.
-        return current.compareTo(end) <= 0;
+        return current.compareTo(end) < 0;
     }
 
     @Override
@@ -90,7 +89,7 @@ public class LookAndSayIterator implements RIterator<BigInteger> {
         if (seed.signum() <= 0) {
             throw new IllegalArgumentException("Seed must be positive.");
         }
-        if (seed.compareTo(end) >= 0) {
+        if (seed.compareTo(end) > 0) {
             throw new IllegalArgumentException("Seed must be less than end.");
         }
         String s = seed.toString();
