@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CS5010_A1/CS5010_A1.iml" filepath="$PROJECT_DIR$/CS5010_A1/CS5010_A1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS5010_A2/CS5010_A2.iml" filepath="$PROJECT_DIR$/CS5010_A2/CS5010_A2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS5010_A3/CS5010_A3.iml" filepath="$PROJECT_DIR$/CS5010_A3/CS5010_A3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS5010_A4/CS5010_A4.iml" filepath="$PROJECT_DIR$/CS5010_A4/CS5010_A4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS5010_A5/CS5010_A5.iml" filepath="$PROJECT_DIR$/CS5010_A5/CS5010_A5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CS5010_java.iml" filepath="$PROJECT_DIR$/.idea/CS5010_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab1/Lab1.iml" filepath="$PROJECT_DIR$/Lab1/Lab1.iml" />
+    </modules>
+  </component>
+</project>
