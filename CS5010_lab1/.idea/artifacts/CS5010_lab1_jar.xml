@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="CS5010_lab1:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CS5010_lab1_jar</output-path>
+    <root id="root">
+      <element id="archive" name="CS5010_lab1.jar">
+        <element id="module-output" name="CS5010_lab1" />
+      </element>
+      <element id="file-copy" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/26.0.2/annotations-26.0.2.jar" />
+    </root>
+  </artifact>
+</component>
