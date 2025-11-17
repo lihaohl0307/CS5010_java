@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CS5010_lab2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Lab1/CS5010_lab1/res/CS5010_lab1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

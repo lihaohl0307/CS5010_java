@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="CS5010_lab1_jar2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Lab1/CS5010_lab1/out/artifacts/CS5010_lab1_jar/annotations-26.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lab1/CS5010_lab1/out/artifacts/CS5010_lab1_jar/CS5010_lab1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
