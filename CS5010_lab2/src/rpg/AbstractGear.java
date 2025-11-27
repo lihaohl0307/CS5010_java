@@ -48,6 +48,7 @@ public abstract class AbstractGear implements Gear {
         int atk = stronger.getAttack() + weaker.getAttack();
         int def = stronger.getDefense() + weaker.getDefense();
 
+        // move to subclasses, abstract factory design pattern?
         switch (stronger.getType()) {
             case HEAD: return new HeadGear(combinedName, def);        // attack forced to 0 by ctor
             case HAND: return new HandGear(combinedName, atk);        // defense forced to 0 by ctor
