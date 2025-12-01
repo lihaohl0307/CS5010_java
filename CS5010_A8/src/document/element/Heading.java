@@ -9,7 +9,6 @@ public class Heading extends BasicText {
 
     /**
      * A heading in a document.
-     *
      * @param text  the text
      * @param level the level of the heading
      */
@@ -20,7 +19,6 @@ public class Heading extends BasicText {
 
     /**
      * Accessor for the level of the heading.
-     *
      * @return the level
      */
     public int getLevel() {

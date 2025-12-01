@@ -1,16 +1,7 @@
 package document;
 
-import document.element.BasicText;
-import document.element.BoldText;
-import document.element.Heading;
-import document.element.HyperText;
-import document.element.ItalicText;
-import document.element.Paragraph;
+import document.element.*;
 
-/**
- * Visitor that builds a simple, space-separated plain-text representation
- * of a document. All formatting information is ignored.
- */
 public class BasicStringVisitor implements DocumentVisitor<String> {
 
     private final StringBuilder builder = new StringBuilder();

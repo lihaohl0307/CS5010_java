@@ -9,7 +9,6 @@ public class BoldText extends BasicText {
 
     /**
      * Constructor.
-     *
      * @param text the text
      */
     public BoldText(String text) {

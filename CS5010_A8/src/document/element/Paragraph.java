@@ -39,14 +39,11 @@ public class Paragraph implements TextElement {
 
     @Override
     public String getText() {
-        StringBuilder result = new StringBuilder();
+        StringBuilder result = new StringBuilder("");
         for (BasicText element : content) {
-            if (result.length() > 0) {
-                result.append(" ");
-            }
-            result.append(element.getText());
+            result.append(element.getText()).append(" ");
         }
-        return result.toString();
+        return result.toString().trim();
     }
 
     @Override

@@ -86,7 +86,7 @@ public class DocumentVisitorTest {
                 "<h1>Title</h1>\n" +
                         "Hello world\n" +
                         "<a href=\"https://example.com\">Click here</a>\n" +
-                        "<p>This is cool</p>";
+                        "<p>This <i>is</i> <b>cool</b></p>";
 
         assertEquals(expected, html);
     }

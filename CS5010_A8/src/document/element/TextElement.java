@@ -18,8 +18,8 @@ public interface TextElement {
      * Accept a visitor.
      *
      * @param visitor the visitor
-     * @param <R> the result type of the visitor
+     * @param <R>     the result type of the visitor
      * @return the value returned by the visitor for this element
      */
-    <R> R accept(DocumentVisitor<R> visitor);
+    <R> R accept(document.DocumentVisitor<R> visitor);
 }

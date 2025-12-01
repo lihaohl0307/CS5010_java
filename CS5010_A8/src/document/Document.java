@@ -5,10 +5,6 @@ import java.util.List;
 
 import document.element.TextElement;
 
-/**
- * A representation of a rich-text document composed of a sequence of
- * {@link TextElement}s.
- */
 public class Document {
 
     private List<TextElement> content;
@@ -17,23 +13,16 @@ public class Document {
         content = new ArrayList<>();
     }
 
-    /**
-     * Add a new element to the end of this document.
-     *
-     * @param e the element to add
-     */
     public void add(TextElement e) {
         content.add(e);
     }
 
     /**
-     * Accept the given visitor and apply it to every element in this document
-     * in order. The visitor is responsible for accumulating any results.
+     * Accept the given visitor, applying it to every element in order.
      *
-     * @param visitor the visitor to accept
-     * @param <R>     the return type of the visitor's methods
-     * @return the last value returned from the visitor (many visitors will
-     *         simply ignore this and store their result in fields)
+     * @param visitor the visitor
+     * @param <R>     the result type of the visitor
+     * @return the last value returned by the visitor (many visitors just ignore it)
      */
     public <R> R accept(DocumentVisitor<R> visitor) {
         R result = null;
@@ -44,25 +33,23 @@ public class Document {
     }
 
     /**
-     * Count the number of words in this document.
+     * Count the number of words in this document using a WordCountVisitor.
      *
-     * @return the total word count
+     * @return the total number of words
      */
     public int countWords() {
-        WordCountVisitor visitor = new WordCountVisitor();
+        WordCountVisitor wc = new WordCountVisitor();
         for (TextElement e : content) {
-            e.accept(visitor);
+            e.accept(wc);
         }
-        return visitor.getCount();
+        return wc.getCount();
     }
 
     /**
-     * Produce a textual representation of this document using the provided
-     * string-building visitor. The visitor is applied to every element and
-     * is expected to accumulate its result internally and expose it via
-     * {@link Object#toString()}.
+     * Produce a textual representation using the given "string visitor".
+     * The visitor accumulates the result internally and exposes it via toString().
      *
-     * @param visitor a visitor that builds up a string representation
+     * @param visitor a visitor that builds up a string
      * @return the string produced by the visitor
      */
     public String toText(DocumentVisitor<String> visitor) {

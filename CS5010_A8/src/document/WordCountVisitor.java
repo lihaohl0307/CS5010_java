@@ -1,37 +1,23 @@
 package document;
 
-import document.element.BasicText;
-import document.element.BoldText;
-import document.element.Heading;
-import document.element.HyperText;
-import document.element.ItalicText;
-import document.element.Paragraph;
+import document.element.*;
 
-/**
- * A visitor that counts the number of words in a document.
- * It only looks at the text of TextElement objects.
- */
 public class WordCountVisitor implements DocumentVisitor<Integer> {
 
     private int count = 0;
 
     private void addWords(String text) {
-        if (text == null || text.isEmpty()) {
+        if (text == null) {
             return;
         }
-        String[] parts = text.trim().split("\\s+");
-        for (String p : parts) {
-            if (!p.isEmpty()) {
-                count++;
-            }
+        String trimmed = text.trim();
+        if (trimmed.isEmpty()) {
+            return;
         }
+        String[] parts = trimmed.split("\\s+");
+        count += parts.length;
     }
 
-    /**
-     * Get the total number of words seen so far.
-     *
-     * @return word count
-     */
     public int getCount() {
         return count;
     }
@@ -68,7 +54,7 @@ public class WordCountVisitor implements DocumentVisitor<Integer> {
 
     @Override
     public Integer visitParagraph(Paragraph current) {
-        // Paragraph#getText() returns the concatenated text of its contents
+        // Paragraph#getText() already concatenates inner texts
         addWords(current.getText());
         return count;
     }
